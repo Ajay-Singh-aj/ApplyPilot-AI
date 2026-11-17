@@ -25,13 +25,13 @@ SECTION_HEADERS = {
 
 
 def _find_email(text: str) -> str | None:
-    match = re.search(r"\\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}\\b", text)
+    match = re.search(r"\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}\b", text)
     return match.group(0) if match else None
 
 
 def _find_phone(text: str) -> str | None:
-    match = re.search(r"(?<!\\w)(?:\\+?\\d[\\d\\s().-]{8,}\\d)(?!\\w)", text)
-    return re.sub(r"\\s+", " ", match.group(0)).strip() if match else None
+    match = re.search(r"(?<!\w)(?:\+?\d[\d\s().-]{8,}\d)(?!\w)", text)
+    return re.sub(r"\s+", " ", match.group(0)).strip() if match else None
 
 
 def _find_name(text: str) -> str | None:
@@ -40,7 +40,7 @@ def _find_name(text: str) -> str | None:
         if (
             candidate
             and len(candidate.split()) <= 5
-            and not re.search(r"@|https?://|\\d{4}", candidate)
+            and not re.search(r"@|https?://|\d{4}", candidate)
             and not any(word in candidate.lower() for word in ("resume", "curriculum", "phone"))
         ):
             return candidate
