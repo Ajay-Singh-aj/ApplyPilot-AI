@@ -2,7 +2,7 @@
 
 An open-source, privacy-first job-search assistant. ApplyPilot helps a candidate structure their resume, define job preferences, and prepare for later job-discovery and application workflows.
 
-> **Current milestone: Phase 1 — Resume & Profile Intelligence.** This release parses a local PDF/DOCX resume, extracts text, builds a reviewable candidate profile, and stores preferences. It does not scrape job boards or submit applications.
+> **Current milestone: Phase 2 — Job Discovery & Matching.** In addition to local resume parsing, ApplyPilot can query the Adzuna India API, score listings against the candidate profile, and store results locally. It does not submit applications.
 
 ## Candidate targeting preset
 
@@ -14,13 +14,13 @@ The example configuration is tuned for an India-wide search across:
 
 This is a search preference, not a claim about the candidate's employment duration. The system preserves the resume's actual dates and facts.
 
-## Phase 1 features
+## Phase 1 and Phase 2 features
 
 - Extract text from PDF and DOCX resumes.
 - Build a structured, editable profile (skills, education, experience, projects, contact fields).
 - Keep personal resume data local; no resume is sent to an LLM in Phase 1.
 - Store role, experience, and location preferences in JSON.
-- CLI commands to parse, inspect, and validate a profile.
+- CLI commands to parse, inspect, and validate a profile.\n- Search India job listings through the Adzuna API adapter.\n- Explainable skills/role/experience/location scoring and local SQLite storage.
 
 ## Quick start
 
@@ -48,7 +48,7 @@ ApplyPilot-AI/
 │   └── preferences.json
 ├── data/
 │   └── .gitkeep
-├── src/applypilot/
+├── src/applypilot/\n│   ├── jobs/\n│   │   ├── adzuna.py\n│   │   ├── matcher.py\n│   │   └── storage.py
 │   ├── profile/
 │   │   ├── resume_parser.py
 │   │   ├── profile_builder.py
