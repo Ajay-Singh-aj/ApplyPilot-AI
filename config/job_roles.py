@@ -1,0 +1,15 @@
+TARGET_ROLES = [
+    "AI Engineer",
+    "Machine Learning Engineer",
+    "Generative AI Engineer",
+    "Data Scientist",
+    "Data Analyst",
+    "Business Analyst",
+    "Software Development Engineer I",
+    "SDE-1",
+    "Python Developer",
+    "Applied Scientist",
+    "NLP Engineer",
+    "Research Engineer",
+    "MLOps Engineer",
+]
