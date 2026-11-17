@@ -1,5 +1,11 @@
 """ApplyPilot AI entry point."""
 import argparse
+import sys
+from pathlib import Path
+
+# Allow running from a source checkout without installing the package.
+PROJECT_ROOT = Path(__file__).resolve().parent
+sys.path.insert(0, str(PROJECT_ROOT / "src"))
 
 from applypilot.cli import parse_resume, show_profile, validate_saved_profile
 
