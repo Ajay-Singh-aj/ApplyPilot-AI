@@ -12,7 +12,7 @@ import json
 
 
 def _plain_text(html: str) -> str:
-    return re.sub(r"\\s+", " ", re.sub(r"<[^>]+>", " ", html or "")).strip()
+    return re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", html or "")).strip()
 
 
 def search_himalayas(query: str, country: str = "India", page: int = 1) -> list[dict]:
