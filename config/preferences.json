@@ -1,0 +1,34 @@
+{
+  "country": "India",
+  "target_roles": [
+    "AI Engineer",
+    "Machine Learning Engineer",
+    "Generative AI Engineer",
+    "Data Scientist",
+    "Data Analyst",
+    "Business Analyst",
+    "Software Development Engineer I",
+    "SDE-1",
+    "Python Developer",
+    "Applied Scientist",
+    "NLP Engineer",
+    "Research Engineer",
+    "MLOps Engineer"
+  ],
+  "minimum_required_experience_years": 0,
+  "maximum_required_experience_years": 2,
+  "preferred_locations": [
+    "India",
+    "Bengaluru",
+    "Hyderabad",
+    "Mumbai",
+    "Pune",
+    "Delhi NCR",
+    "Chennai",
+    "Noida",
+    "Gurugram"
+  ],
+  "allow_remote": true,
+  "allow_hybrid": true,
+  "note": "Search filters only. Never infer or alter the candidate's actual employment duration."
+}
